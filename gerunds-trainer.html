@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerunds Trainer — One Section at a Time</title>
+  <link rel="stylesheet" href="./gerunds-trainer.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- Row 1: full width progress -->
+    <section class="card topbar">
+      <div class="progressBlock">
+        <div class="progressHead">
+          <div>Overall progress</div>
+          <div class="rightLabel">
+            <div style="opacity:.9">progress</div>
+            <div class="pill"><b id="doneCount">0</b>/<span id="totalCount">0</span></div>
+          </div>
+        </div>
+        <div class="barWrap">
+          <div class="bar" id="progressBar"></div>
+        </div>
+      </div>
+
+      <div class="pillRow" aria-label="Stats">
+        <div class="pill"><b id="xp">0</b> XP</div>
+        <div class="pill"><b id="streak">0</b> streak</div>
+        <div class="pillCol">
+          <div class="pill"><b id="bestStreak">0</b> best</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Row 2: brand + section + actions -->
+    <header class="headerGrid">
+      <div class="card brand">
+        <h1>Gerunds Trainer</h1>
+        <p>One section visible. One exercise at a time. 20 common cases per section.</p>
+      </div>
+
+      <div class="card sectionCard">
+        <div class="label">Section</div>
+        <div class="seg" id="seg"></div>
+        <div class="tiny" style="margin-top:12px;">
+          Tip: stay in one section until it feels <b style="color:var(--text); font-weight:700;">automatic</b>.
+        </div>
+      </div>
+
+      <div class="card actionsCard">
+        <div class="btns">
+          <button class="primary" id="btnHint" type="button">Hint</button>
+          <button id="btnRestartSection" type="button">Restart section</button>
+          <button class="danger" id="btnResetAll" type="button">Reset all</button>
+        </div>
+        <div class="tiny" style="margin-top:auto; text-align:right;">
+          Next unlocks only after a correct answer.
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel" id="panel"></section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="./gerunds-trainer.js"></script>
+</body>
+
+</html>
